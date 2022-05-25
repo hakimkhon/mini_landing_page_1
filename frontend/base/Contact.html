@@ -1,0 +1,28 @@
+{% extends 'details/main.html' %}
+{% block title %}Contact{% endblock %}
+{% block content%}
+{% load static %}
+
+<main>
+    <section id="content">
+        <h1>Contact our Team</h1>
+        <div id="formbox">
+            <form name="formContact" method="post" action="https://www.shorturl.at/contact.php">
+                <p class="formtext">Name<br><input name="namebox" type="text" style="width: 100%; max-width: 300px;"
+                        required></p>
+                <p class="formtext">E-mail<br><input name="emailbox" type="email" style="width: 100%; max-width: 300px;"
+                        required></p>
+                <p class="formtext">Message<br><textarea name="messagebox"
+                        style="width: 100%; max-width: 300px; height: 80px;" required></textarea></p>
+                <p class="formtext">3 + 5 = <input name="cptcbox" type="text" style="width: 100%; max-width: 40px;"
+                        required></p>
+                <input name="cptc_number_1" type="hidden" value="3">
+                <input name="cptc_number_2" type="hidden" value="5">
+                <p id="button"><input name="submit" value="Send" type="submit"> <input name="submit" value="Clean"
+                        type="reset"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

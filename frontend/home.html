@@ -1,0 +1,90 @@
+{% extends 'details/main.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content%}
+{% load static %}
+<main>    
+  <section id="urlbox">
+      <h1>Paste the URL to be shortened</h1>
+      <form action="" method="POST">
+          <input type="hidden" name="csrfmiddlewaretoken"
+              value="EsRvBlMmrpRB1ftVKrEwkLhDKC2rbqn0eqf6QJznvfNNNwJZ9w2SLmqbCHVBob89">
+          <div id="formurl">
+              <input type="url"  name="long_url" class=" form-control form-control-lg " style="padding: 1rem;"
+                  placeholder="Enter the link here" required="" id="id_long_url">
+              <div id="formbutton">
+                  <input type="submit" class="btn-lg w-100" value="Shorten URL">
+              </div>
+          </div>
+      </form>
+      <p class="boxtextcenter">ShortURL.at is a  free tool to shorten a URL or reduce a link<br>Use our URL Shortener
+          to create a shortened link making it easy to remember</p>
+  </section>
+
+  <section id="emailbox">
+      <h2>Want More? Try Premium Features!</h2>
+      <p class="boxtextcenter" style="margin: 0 auto 20px auto;">Custom short links, powerful dashboard, detailed
+          analytics, API, UTM builder, QR codes, browser extension, 50+ app integrations and support. Only $9/month.
+      </p>
+      <a href="https:" class="colorbutton">Go Premium</a>
+      <p class="boxtextcenter"><span class="textsmall aligncenter"><a href="https:" class="textsmall">Sign up free at
+                  <img src="{% static 'imgs/rebrandly-logo.svg' %}" width="80" alt="URL"></a></span></p>
+      <script type="3cdb5984d9e523d7bc56f8b0-text/javascript">
+          var ClickMeter_pixel_url = '//pixel.watch/9sab';
+      </script>
+      <script type="3cdb5984d9e523d7bc56f8b0-text/javascript" id="cmpixelscript"
+          src="./My Url shortener_files/pixelNew.js.Без названия"></script> <noscript> <img height='0' width='0'
+              alt='' src='' /> </noscript>
+  </section>
+  
+  <section id="content">
+      <h2>Simple and fast URL shortener!</h2>
+      <p>ShortURL allows to reduce long links from <a href="https://www.instagram.com/" target="_blank">Instagram</a>,
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>, <a href="https://www.youtube.com/"
+              target="_blank">YouTube</a>, <a href="https://www.twitter.com/" target="_blank">Twitter</a>, <a
+              href="https://www.linkedin.com/" target="_blank">Linked In</a> and top sites on the Internet, just paste
+          the long URL and click the Shorten URL button. On the next screen, copy the shortened URL and share it on
+          websites, chat and e-mail. After shortening the URL, check <a
+              href="{% url 'urls:URL' %}">how many clicks it received</a>.
+      </p>
+      <h2>Shorten, share and track</h2>
+      <p>Your shortened URLs can be used in publications, documents, advertisements, blogs, forums, instant messages,
+          and other locations. Track statistics for your business and projects by monitoring the number of hits from
+          your URL with the click counter, you do not have to register.</p>
+  </section>
+
+  <div id="box">
+      <div id="row">
+          <div id="column">
+              <div class="icon"><img src="{% static 'imgs/icon-like.png' %}"></div>
+              <h3 class="aligncenter">Easy</h3>
+              <p class="aligncenter">ShortURL is easy and fast, enter the long link to get your shortened link</p>
+          </div>
+          <div id="column">
+              <div class="icon"><img src="{% static 'imgs/icon-url.png' %}"></div>
+              <h3 class="aligncenter">Shortened</h3>
+              <p class="aligncenter">Use any link, no matter what size, ShortURL always shortens</p>
+          </div>
+          <div id="column">
+              <div class="icon"><img src="{% static 'imgs/icon-secure.png' %}"></div>
+              <h3 class="aligncenter">Secure</h3>
+              <p class="aligncenter">It is fast and secure, our service have HTTPS protocol and data encryption</p>
+          </div>
+          <div id="column">
+              <div class="icon"><img src="{% static 'imgs/icon-statistics.png' %}"></div>
+              <h3 class="aligncenter">Statistics</h3>
+              <p class="aligncenter">Check the amount of clicks that your shortened url received</p>
+          </div>
+          <div id="column">
+              <div class="icon"><img src="{% static 'imgs/icon-unique.png' %}"></div>
+              <h3 class="aligncenter">Reliable</h3>
+              <p class="aligncenter">All links that try to disseminate spam, viruses and malware are deleted</p>
+          </div>
+          <div id="column">
+              <div class="icon"><img src="{% static 'imgs/icon-responsive.png' %}"></div>
+              <h3 class="aligncenter">Devices</h3>
+              <p class="aligncenter">Compatible with smartphones, tablets and desktop</p>
+          </div>
+      </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'details/main.html' %}
+{% block title %}Contact{% endblock %}
+{% block content%}
+{% load static %}
+    <main>  
+        <section id="urlbox">
+            <h1>Paste the URL to be shortened</h1>
+            <form action="" method="POST">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                    value="">
+                <div id="formurl">
+                    <input type="url"  name="long_url" class=" form-control form-control-lg" style="padding: 1rem;"
+                        placeholder="Enter the link here" required="" id="id_long_url">
+                    <div id="formbutton">
+                        <input type="submit" class="btn-lg w-100" value="Shorten URL">
+                    </div>
+                </div>
+            </form>   
+            <p class="boxtextcenter">ShortURL.at is a  free tool to shorten a URL or reduce a link<br>Use our URL Shortener
+                to create a shortened link making it easy to remember</p>
+        </section>     
+    </main>
+{% endblock %}

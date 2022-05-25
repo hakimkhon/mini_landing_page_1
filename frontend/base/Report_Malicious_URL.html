@@ -1,0 +1,31 @@
+{% extends 'details/main.html' %}
+{% block title %}Report Malicious URL{% endblock %}
+{% block content%}
+{% load static %}
+
+<main>
+    <section id="content">
+        <h1>Report Malicious Short Link</h1>
+        <p>Use the form below to report URLs that are distributing spam and malware. Help us by sending links that are
+            against our terms of use, we will delete and block these shortened links. If spammers are sending you
+            e-mails containing our shortened URLs, tell us and we can take quick action to avoid the distribution of
+            inappropriate links.</p>
+        <div id="formbox">
+            <form name="formContact" method="post" action="https://www.shorturl.at/report-malicious-url.php">
+                <p class="formtext">Invalid or malicious URL<br><input name="urlbox" type="text"
+                        style="width: 100%; max-width: 300px;" placeholder="shorturl.at/AbCdE" required></p>
+                <p class="formtext">Comment<br><textarea name="messagebox"
+                        style="width: 100%; max-width: 300px; height: 80px;" required></textarea></p>
+                <p class="formtext">7 + 6 = <input name="cptcbox" type="text" style="width: 100%; max-width: 40px;"
+                        required></p>
+                <input name="emailbox" type="hidden" value="delete@shorturl.at">
+                <input name="cptc_number_1" type="hidden" value="7">
+                <input name="cptc_number_2" type="hidden" value="6">
+                <p id="button"><input name="submit" value="Send" type="submit"> <input name="submit" value="Clean"
+                        type="reset"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

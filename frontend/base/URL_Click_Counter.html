@@ -1,0 +1,28 @@
+{% extends 'details/main.html' %}
+{% block title %}URL Click Counter{% endblock %}
+{% block content%}
+{% load static %}
+
+<main>
+    <section id="content">
+        <h1>URL Click Counter</h1>
+        <p>Enter the URL to find out how many clicks it has received so far.</p>
+    </section>
+    <section id="urlbox">
+        <br><br>
+        <form action="url-total-clicks.php" method="get">
+            <div id="formurl">
+                <input type="text" name="u" placeholder="Enter here your shortened URL">
+                <div id="formbutton">
+                    <input type="submit" value="Track Clicks">
+                </div>
+            </div>
+        </form>
+        <p style="padding: 0 50px;">Example: shorturl.at/AbCdE</p>
+    </section>
+    <section id="content">
+        <p>* Track the total hits of the shortened URL in real time, you do not have to register.</p>
+    </section>
+</main>
+
+{% endblock %}
